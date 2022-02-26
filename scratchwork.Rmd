@@ -1,0 +1,33 @@
+---
+title: "scratchwork"
+author: "Ishan Bhatt"
+date: "2/3/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE, message = F}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(haven)
+library(readxl)
+```
+
+
+```{r data reading, message = F}
+
+abortions <- read_csv("data-raw/abortion-distances.csv")
+moral_values <- read_dta("data-raw/county-moral-values.dta")
+county_cohort_impact <- read_dta("data-raw/opp-insights/county_cohort_trends.dta")
+county_cohort_simple <- read_csv("data-raw/opp-insights/county-outcomes-simple.csv")
+health_trends <- read_csv("data-raw/opp-insights/county-health.csv")
+covariates <- read_csv("data-raw/opp-insights/cty_covariates.csv")
+gender <- read_excel("data-raw/opp-insights/gender-cty.xls")
+lifeexpectancy <- read_csv("data-raw/opp-insights/life-expectancy.csv")
+outcomesgained26 <- read_excel("data-raw/opp-insights/outcomes-gained-26.xlsx")
+outcomesgained <-  read_excel("data-raw/opp-insights/outcomes-gained.xlsx")
+
+```
+
+
+
+
